@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>subtree-of-another-tree</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <p>
+          给定两个非空二叉树 <strong>s</strong> 和
+          <strong>t</strong>，检验&nbsp;<strong>s</strong> 中是否包含和
+          <strong>t</strong> 具有相同结构和节点值的子树。<strong>s</strong>
+          的一个子树包括
+          <strong>s</strong> 的一个节点和这个节点的所有子孙。<strong>s</strong>
+          也可以看做它自身的一棵子树。
+        </p>
+
+        <p>
+          <strong>示例 1:</strong><br />
+          给定的树 s:
+        </p>
+
+        <pre>
+             3
+            / \
+           4   5
+          / \
+         1   2
+        </pre>
+
+        <p>给定的树 t：</p>
+
+        <pre>
+           4 
+          / \
+         1   2
+        </pre>
+
+        <p>
+          返回 <strong>true</strong>，因为 t 与 s
+          的一个子树拥有相同的结构和节点值。
+        </p>
+
+        <p>
+          <strong>示例 2:</strong><br />
+          给定的树 s：
+        </p>
+
+        <pre>
+             3
+            / \
+           4   5
+          / \
+         1   2
+            /
+           0
+        </pre>
+
+        <p>给定的树 t：</p>
+
+        <pre>
+           4
+          / \
+         1   2
+        </pre>
+
+        <p>返回 <strong>false</strong>。</p>
+      </div>
+    </div>
+    <div style="margin: 50px 0; padding: 10px; border: 1px solid;">
+        <strong>解题思路:</strong><br />
+        遍历 s 的每个节点，判断当前遍历节点与当前 t 的节点信息是否一致。<br />
+        当节点信息一致时，再判断当前节点的左右节点是否与当前 t 的左右节点是否一致。<br />
+        如果当前遍历节点信息与当前 t 的节点信息不一致，则使用当前节点的左右节点和当前 t 节点进行比较。<br />
+        重复此操作，直至遍历结束。<br />
+    </div>
+    <div>
+      来源：力扣（LeetCode）<br />
+      链接：<a href="https://leetcode-cn.com/problems/subtree-of-another-tree"
+        >https://leetcode-cn.com/problems/subtree-of-another-tree</a
+      ><br />
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
