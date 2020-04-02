@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>permutations-ii</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <p>给定一个可包含重复数字的序列，返回所有不重复的全排列。</p>
+
+        <p><strong>示例:</strong></p>
+        <pre><strong>输入:</strong> [1,1,2]
+<strong>输出:</strong>
+[
+  [1,1,2],
+  [1,2,1],
+  [2,1,1]
+]</pre
+        >
+      </div>
+    </div>
+    <div style="margin: 50px 0; padding: 10px; border: 1px solid;">
+      <strong>解题思路:</strong><br />
+      我解了半天没接出来，这题好难。所以我还是看了一下别人的解题思路。<br />
+      是用了一种回溯算法，这种算法是一种搜索法，按条件向前搜索以达到目标，当搜索发现达不到目标之后就会退回一步重新搜索。<br />
+      在此题中，首先设定一个栈堆，从原数组取出每一项入栈，搜索到解法之后回溯。重复此过程，搜索到所有解法。<br />
+      当原数组中有重复项时，需要做判断来进行剪枝。<br />
+      我原先是使用数组字符串化来进行排重，但后来看别人的解法是可以先排序原数组然后在搜索过程中判断当前项是否和上一项相等来进行剪枝，性能比我的方法要好。<br />
+    </div>
+    <div>
+      来源：力扣（LeetCode）<br />
+      链接：<a href="https://leetcode-cn.com/problems/permutations-ii/"
+        >https://leetcode-cn.com/problems/permutations-ii/</a
+      ><br />
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
