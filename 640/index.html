@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)file:///C:/Users/Lonel/Desktop/daily-leetcode/1010/index.html -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>solve-the-equation</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <p>
+          求解一个给定的方程，将<code>x</code>以字符串"x=#value"的形式返回。该方程仅包含'+'，'
+          - '操作，变量&nbsp;<code>x</code>&nbsp;和其对应系数。
+        </p>
+
+        <p>如果方程没有解，请返回“No solution”。</p>
+
+        <p>如果方程有无限解，则返回“Infinite solutions”。</p>
+
+        <p>
+          如果方程中只有一个解，要保证返回值&nbsp;<code>x</code>&nbsp;是一个整数。
+        </p>
+
+        <p><strong>示例 1：</strong></p>
+
+        <pre><strong>输入:</strong> "x+5-3+x=6+x-2"
+<strong>输出:</strong> "x=2"
+      </pre>
+
+        <p><strong>示例 2:</strong></p>
+
+        <pre><strong>输入:</strong> "x=x"
+<strong>输出:</strong> "Infinite solutions"
+      </pre>
+
+        <p><strong>示例 3:</strong></p>
+
+        <pre><strong>输入:</strong> "2x=x"
+<strong>输出:</strong> "x=0"
+      </pre>
+
+        <p><strong>示例 4:</strong></p>
+
+        <pre><strong>输入:</strong> "2x+3x-6x=x+2"
+<strong>输出:</strong> "x=-1"
+      </pre>
+
+        <p><strong>示例 5:</strong></p>
+
+        <pre><strong>输入:</strong> "x=x+2"
+<strong>输出:</strong> "No solution"
+      </pre>
+      </div>
+    </div>
+    <div style="margin: 50px 0; padding: 10px; border: 1px solid;">
+      <strong>解题思路:</strong><br />
+      以示例 1 的输入为例，将方程式拆分成 [['x', '+5', '-3', '+x'], ['6', '+x', '-2']]。<br />
+      将 x 移到等号左边，将常数移到等号右边。为 x 计数，如果 x === 0 的情况下：<br />
+      1) 常数不为 0，则说明该方程无解。<br />
+      2) 常数为 0，则说明该方程有无限解。<br />
+      <br />
+      其他情况，则说明 x 有解。使用常数除以 x 的计数可得出答案。
+    </div>
+    <div>
+      来源：力扣（LeetCode）<br />
+      链接：<a href="https://leetcode-cn.com/problems/solve-the-equation"
+        >https://leetcode-cn.com/problems/solve-the-equation</a
+      ><br />
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
