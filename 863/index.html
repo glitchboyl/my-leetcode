@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)file:///C:/Users/Lonel/Desktop/daily-leetcode/1010/index.html -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>all-nodes-distance-k-in-binary-tree</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <p>
+          给定一个二叉树（具有根结点&nbsp;<code>root</code>），&nbsp;一个目标结点&nbsp;<code>target</code>&nbsp;，和一个整数值
+          <code>K</code> 。
+        </p>
+
+        <p>
+          返回到目标结点 <code>target</code> 距离为
+          <code>K</code> 的所有结点的值的列表。 答案可以以任何顺序返回。
+        </p>
+
+        <p>&nbsp;</p>
+
+        <ol></ol>
+
+        <p><strong>示例 1：</strong></p>
+
+        <pre><strong>输入：</strong>root = [3,5,1,6,2,0,8,null,null,7,4], target = 5, K = 2
+      
+<strong>输出：</strong>[7,4,1]
+      
+<strong>解释：</strong>
+所求结点为与目标结点（值为 5）距离为 2 的结点，值分别为 7，4，以及 1
+      
+  <img style="height: 240px; width: 280px;" src="./sketch0.png" alt="">
+      
+注意，输入的 "root" 和 "target" 实际上是树上的结点。
+上面的输入仅仅是对这些对象进行了序列化描述。
+      </pre>
+
+        <p>&nbsp;</p>
+
+        <p><strong>提示：</strong></p>
+
+        <ol>
+          <li>给定的树是非空的，且最多有&nbsp;<code>K</code>&nbsp;个结点。</li>
+          <li>
+            树上的每个结点都具有唯一的值&nbsp;<code
+              >0 &lt;= node.val &lt;= 500</code
+            >&nbsp;。
+          </li>
+          <li>目标结点&nbsp;<code>target</code>&nbsp;是树上的结点。</li>
+          <li><code>0 &lt;= K &lt;= 1000</code>.</li>
+        </ol>
+      </div>
+    </div>
+    <div style="margin: 50px 0; padding: 10px; border: 1px solid;">
+      <strong>解题思路:</strong><br />
+      先 DFS 获取到目标节点，过程记录 parent 节点。<br />
+      写一个向下获取到 node 的距离为 k 的所有节点的方法。<br />
+      然后先向下获取目标节点距离 k 的所有节点，再向上递归获取目标节点的 parent
+      节点距离 (k - 1) 的所有节点。直到 k === 0 为止。<br />
+      要把不是正解的节点记录一下，因为递归的过程中有可能会再次获取到这个节点。<br />
+      <br />
+      <p style="margin-bottom: 0; color: #aaa;">
+        这个题的
+        <a
+          href="https://leetcode-cn.com/problems/all-nodes-distance-k-in-binary-tree/solution/js-by-glitchboyl/"
+          >JS 解法</a
+        >居然是我第一个写出来的。<span style="text-decoration: line-through;">
+          难道我大 JS 后继无人了吗？</span
+        >
+      </p>
+    </div>
+    <div>
+      来源：力扣（LeetCode）<br />
+      链接：<a
+        href="https://leetcode-cn.com/problems/all-nodes-distance-k-in-binary-tree"
+        >https://leetcode-cn.com/problems/all-nodes-distance-k-in-binary-tree</a
+      ><br />
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
